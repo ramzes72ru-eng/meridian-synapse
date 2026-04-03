@@ -8,6 +8,7 @@ import {
   MessageSquare, 
   FileText, 
   Building2,
+  Zap,
   Menu,
   X,
   ChevronRight
