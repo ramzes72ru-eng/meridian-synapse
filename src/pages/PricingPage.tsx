@@ -5,8 +5,6 @@ import { Check, ArrowRight } from "lucide-react";
 const plans = [
   {
     name: "Starter",
-    price: "$2,500",
-    period: "/month",
     desc: "For growing companies ready to deploy their first AI management layer.",
     features: [
       "Up to 15 AI agents",
@@ -15,13 +13,11 @@ const plans = [
       "Activity journal",
       "Email support",
     ],
-    cta: "Start Free Trial",
+    cta: "Get Started",
     highlighted: false,
   },
   {
     name: "Enterprise",
-    price: "$8,500",
-    period: "/month",
     desc: "For international holdings and multi-entity organizations.",
     features: [
       "Unlimited AI agents",
@@ -33,13 +29,11 @@ const plans = [
       "Custom agent development",
       "Priority support & SLA",
     ],
-    cta: "Request Demo",
+    cta: "Request Access",
     highlighted: true,
   },
   {
     name: "Custom",
-    price: "Custom",
-    period: "",
     desc: "For organizations requiring bespoke deployment, integration, and consulting.",
     features: [
       "Everything in Enterprise",
@@ -49,7 +43,7 @@ const plans = [
       "Strategic consulting",
       "White-label option",
     ],
-    cta: "Contact Sales",
+    cta: "Contact Us",
     highlighted: false,
   },
 ];
@@ -59,7 +53,7 @@ export default function PricingPage() {
     <div className="min-h-screen px-4 py-16">
       <div className="max-w-5xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Pricing</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Plans</h1>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">Deploy your digital management layer at any scale.</p>
         </motion.div>
 
@@ -72,11 +66,7 @@ export default function PricingPage() {
               transition={{ delay: i * 0.1 }}
               className={`rounded-xl p-6 ${plan.highlighted ? 'glass-panel-strong border-primary/30 glow-cyan' : 'glass-panel'}`}
             >
-              <h3 className="text-lg font-semibold text-foreground mb-1">{plan.name}</h3>
-              <div className="flex items-baseline gap-1 mb-3">
-                <span className="text-3xl font-bold text-foreground">{plan.price}</span>
-                <span className="text-sm text-muted-foreground">{plan.period}</span>
-              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-3">{plan.name}</h3>
               <p className="text-sm text-muted-foreground mb-6">{plan.desc}</p>
               <div className="space-y-2.5 mb-8">
                 {plan.features.map(f => (
@@ -87,7 +77,7 @@ export default function PricingPage() {
                 ))}
               </div>
               <Link
-                to="/request-demo"
+                to="/contact"
                 className={`block text-center py-3 rounded-lg font-medium text-sm transition-all ${
                   plan.highlighted
                     ? 'bg-primary text-primary-foreground hover:bg-primary/90'
