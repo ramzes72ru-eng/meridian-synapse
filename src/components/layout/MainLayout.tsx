@@ -23,6 +23,7 @@ const navItems = [
   { path: '/departments', label: 'Departments', icon: Users },
   { path: '/collaboration', label: 'Collaboration', icon: MessageSquare },
   { path: '/reports', label: 'Reports', icon: FileText },
+  { path: '/command-center', label: 'Command Center', icon: Zap },
 ];
 
 const secondaryNav = [
