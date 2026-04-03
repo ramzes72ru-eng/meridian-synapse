@@ -15,6 +15,7 @@ import ReportsPage from "./pages/ReportsPage";
 import PricingPage from "./pages/PricingPage";
 import ContactPage from "./pages/ContactPage";
 import RequestDemoPage from "./pages/RequestDemoPage";
+import CommandCenterPage from "./pages/CommandCenterPage";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
